@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
     })
 })
 
-router.get('/:id/list', (req, res) => {
+router.get('/list/:id', (req, res) => {
     const {id} = req.params
     Recipes.getShoppingList(id)
     .then(list => {

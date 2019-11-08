@@ -10,9 +10,9 @@ function getRecipes(){
     return db('recipes')
 }
 
-function getShoppingList(recipe_id){
+function getShoppingList(id){
     return db('all_ingredients')
-    .where({recipe_id: recipe_id})
+    .where({recipe_id: id})
 }
 
 function getInstructions(recipe_id){
